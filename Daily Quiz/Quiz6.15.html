@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>Arithmetic</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        #search input[type="text"] {
+            width: 450px;
+            height: 30px;
+            border: 1px solid #E2A8ED;
+            background-color: #fff;
+            color: #333;
+            font-size: 14px;
+            vertical-align: middle;
+            margin-left: 50px;
+            margin-bottom: 13px;
+            background: 4% no-repeat;
+            padding-left: 25px;
+        }
+
+        #search button[type="submit"] {
+            position: absolute;
+            background-color: rgba( 255, 255, 255, 0);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 5px;
+            cursor: pointer;
+            vertical-align: middle;
+            margin-left: 480px;
+            margin-bottom: 13px;
+            z-index: 1;
+        }
+
+        .quiz-option label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: Times; font-size: 40px; margin-left: 20px; margin-top: 10px;">
+            <a href="../index.html"
+                style="text-decoration: none; color: inherit;">Daily <span style="color: #E2A8ED;">Q</span>uiz
+            </a>
+        </h1>
+        <form id="search" method="get" onsubmit="return result()">
+            <button type="submit" class="searchButton">
+                <img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+            </button>
+            <input type="text" id="name" class="searchBox" placeholder="Search...">
+        </form>
+    </div>
+    <hr style="background: #E2A8ED; height: 3px; border: 0;">
+
+    <form action="결과페이지6_15.html" method="get">
+        <h3 style="font-size: 30px;">질문 : 수직선 위를 움직이는 점 P의 시각 t(t>0)에서의 속도 ν(t)=-4t³+12t²이다. 시각 t=k에서 점 P의 가속도가 12일 때, 시각 t=3k에서 t=4k까지 점 P가 움직인 거리는? (단, k는 상수이다.)
+        </h3>
+        <div class="quiz-option">
+            <label>
+                <input type="radio" name="q1" value="25">
+                <span style="font-size: 20px;">25</span>
+            </label>
+            <label>
+                <input type="radio" name="q1" value="26">
+                <span style="font-size: 20px;">26</span>
+            </label>
+            <label>
+                <input type="radio" name="q1" value="27">
+                <span style="font-size: 20px;">27</span>
+            </label>
+        </div>
+        <br>
+        <input type="submit" value="제출" style="color: #fff; font-family:sans-serif; background-color: #e6b9ef; border: none; border-radius: 4px; padding: 5px 10px;
+        font-size: 20px; margin-left: 100px;">
+    </form>
+
+    <script>
+        function result() {
+            var name = document.getElementById('name').value;
+            var link = name + '.html';
+            window.open(link, target = "_self");
+            return false;
+        }
+    </script>
+</body>
+</html>

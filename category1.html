@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-main: 1;
+		}
+
+		details summary::-webkit-details-marker {
+			color: #E2A8ED;
+			font-size: 20px;
+		}
+
+		ul {
+			margin-left: 30px;
+		}
+
+		summary {
+			margin-left: 40px;
+		}
+
+		ol{
+			margin-left: 40px;
+		}
+
+		h2{
+			margin-left: 30px;
+		}
+
+		div {
+			font-family:sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<div>
+		<h2>초등학교 교육과정</h2>
+		<details>
+			<summary>1학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/9까지의 수.html">9까지의 수</li>
+				<li><a href="Formula/여러가지 모양(1).html">여러가지 모양</a></li>
+				<li><a href="Formula/덧셈과 뺄셈(1).html">덧셈과 뺄셈</a></li>
+				<li><a href="Formula/비교하기.html">비교하기</a></li>
+				<li><a href="Formula/50까지의 수.html">50까지의 수</a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/100까지의 수.html">100까지의 수</a></li>
+				<li><a href="Formula/덧셈과 뺄셈(2).html">덧셈과 뺄셈</a></li>
+				<li><a href="Formula/여러가지 모양(2).html">여러가지 모양</a></li>
+				<li><a href="Formula/시계 보기와 규칙 찾기.html">시계 보기와 규칙 찾기</a></li>
+			</ol>
+		</details>
+		<details>
+			<summary>2학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/세 자리 수.html">세 자리 수</a></li>
+				<li><a href="Formula/여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="Formula/덧셈과 뺄셈(3).html">덧셈과 뺄셈</a></li>
+				<li><a href="Formula/길이 재기(1).html">길이 재기</a></li>
+				<li><a href="Formula/분류하기.html">분류하기</a></li>
+				<li><a href="Formula/곱셈(1).html">곱셈</a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/네 자리 수">네 자리 수</a></li>
+				<li><a href="Formula/곱셈구구.html">곱셈구구</a></li>
+				<li><a href="Formula/길이 재기(2).html">길이 재기</a></li>
+				<li><a href="Formula/시각과 시간.html">시각과 시간</a></li>
+				<li><a href="Formula/표와 그래프.html">표와 그래프</a></li>
+				<li><a href="Formula/규칙 찾기(1).html">규칙 찾기</a></li>
+			</ol>
+		</details>
+		<details>
+			<summary>3학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/덧셈과 뺄셈(4).html">덧셈과 뺄셈</a></li>
+				<li><a href="Formula/평면도형.html">평면도형</a></li>
+				<li><a href="Formula/나눗셈(1).html">나눗셈</a></li>
+				<li><a href="Formula/곱셈(2).html">곱셈</a></li>
+				<li><a href="Formula/길이와 시간.html">길이와 시간</a></li>
+				<li><a href="Formula/분수와 소수.html">분수와 소수</a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/곱셈(3).html">곱셈</a></li>
+				<li><a href="Formula/나눗셈(2).html">나눗셈</a></li>
+				<li><a href="Formula/원.html">원</a></li>
+				<li><a href="Formula/분수.html">분수</a></li>
+				<li><a href="Formula/들이와 무게.html">들이와 무게</a></li>
+				<li><a href="Formula/자료의 정리.html">자료의 정리</a></li>
+			</ol>
+		</details>
+		<details>
+			<summary>4학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/큰 수.html">큰 수</a></li>
+				<li><a href="Formula/각도.html">각도</a></li>
+				<li><a href="Formula/곱셈과 나눗셈.html">곱셈과 나눗셈</a></li>
+				<li><a href="Formula/평면도형의 이동.html">평면도형의 이동</a></li>
+				<li><a href="Formula/막대그래프.html">막대그래프</a></li>
+				<li><a href="Formula/규칙 찾기(2).html">규칙 찾기</a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/분수의 덧셈과 뺄셈(1).html"></a>분수의 덧셈과 뺄셈</li>
+				<li><a href="Formula/삼각형.html">삼각형</a></li>
+				<li><a href="Formula/소수의 덧셈과 뺄셈.html">소수의 덧셈과 뺄셈</a></li>
+				<li><a href="Formula/사각형.html">사각형</a></li>
+				<li><a href="Formula/꺾은선 그래프.html">꺽은선 그래프</a></li>
+				<li><a href="Formula/다각형.html">다각형</a></li>
+			</ol>
+		</details>
+		<details>
+			<summary>5학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/자연수의 혼합계산.html">자연수의 혼합계산</a></li>
+				<li><a href="Formula/약수와 배수.html">약수와 배수</a></li>
+				<li><a href="Formula/규칙과 대응.html">규칙과 대응</a></li>
+				<li><a href="Formula/약분과 통분.html">약분과 통분</a></li>
+				<li><a href="Formula/분수의 덧셈과 뺄셈(2).html"></a>분수의 덧셈과 뺄셈</li>
+				<li><a href="Formula/다각형의 둘레와 넓이.html">다각형의 둘레와 넓이</a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/수의 범위와 어림하기.html">수의 범위와 어림하기</a></li>
+				<li><a href="Formula/분수와 곱셈.html">분수와 곱셈</a></li>
+				<li><a href="Formula/합동과 대칭.html">합동과 대칭</a></li>
+				<li><a href="Formula/소수의 곱셈.html">소수의 곱셈</a></li>
+				<li><a href="Formula/직육면체.html">직육면체</a></li>
+				<li><a href="Formula/평균과 가능성.html">평균과 가능성</a></li>
+			</ol>
+		</details>
+		<details>
+			<summary>6학년</summary>
+			<ol>
+				<h3>1학기</h3>
+				<br>
+				<li><a href="Formula/분수의 나눗셈(1).html">분수의 나눗셈</a></li>
+				<li><a href="Formula/각기둥과 각뿔.html"></a></li>
+				<li><a href="Formula/소수의 나눗셈(1).html"></a></li>
+				<li><a href="Formula/비와 비율.html"></a></li>
+				<li><a href="Formula/여러 가지 그래프.html"></a></li>
+				<li><a href="Formula/직육면체의 부피와 겉넓이.html"></a></li>
+			</ol>
+			<ol>
+				<h3>2학기</h3>
+				<br>
+				<li><a href="Formula/분수의 나눗셈(2).html">분수의 나눗셈</a></li>
+				<li><a href="Formula/소수의 나눗셈(2).html">소수의 나눗셈</a></li>
+				<li><a href="Formula/공간과 입체.html">공간과 입체</a></li>
+				<li><a href="Formula/비례식과 비례배분.html">비례식과 비례배분</a></li>
+				<li><a href="Formula/원의 넓이.html">원의 넓이</a></li>
+				<li><a href="Formula/원기둥, 원뿔, 구.html">원기둥, 원뿔, 구</a></li>
+			</ol>
+		</details>
+
+		<script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'Formula/' + name + '.html'; 
+				window.open(link, target="_self");
+				return false;
+			}
+		</script>
+</body>

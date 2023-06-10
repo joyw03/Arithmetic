@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		details summary::-webkit-details-marker {
+			color: #E2A8ED;
+			font-size: 20px;
+		}
+
+		ul {
+			margin-left: 30px;
+		}
+
+		summary {
+			margin-left: 40px;
+		}
+
+		ol{
+			margin-left: 40px;
+		}
+
+		h2{
+			margin-left: 30px;
+		}
+
+		div {
+			font-family:sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<div>
+		<h2>대학교 교육과정</h2>
+<details>
+		<summary>이산수학</summary>
+		<ol>
+		<br>
+		<li><a href="Formula/논리와 명제.html">논리와 명제</a></li>
+		<li><a href="Formula/관계.html">관계</a></li>
+		<li><a href="Formula/그래프.html">그래프</a></li>
+		<li><a href="Formula/트리.html">트리</a></li>
+		<li><a href="Formula/부울대수.html">부울대수</a></li>
+	</ol>
+</details>
+<details>
+		<summary>미적분학</summary>
+		<ol>
+		<br>
+		<li><a href="Formula/쌍곡선 함수.html">쌍곡선 함수</a></li>
+		<li><a href="Formula/여러가지 미분법.html">여러가지 미분법</a></li>
+		<li><a href="Formula/2계도 함수.html">2계도 함수</a></li>
+		<li><a href="Formula/여러가지 정리.html">여러가지 정리</a></li>
+		<li><a href="Formula/여러가지 적분법.html">여러가지 적분법</a></li>
+		<li><a href="Formula/수열.html">수열</a></li>
+		<li><a href="Formula/이상적분.html">이상적분</a></li>
+	</ol>
+</details>
+<details>
+		<summary>선형대수학</summary>
+		<ol>
+		<br>
+		<li><a href="Formula/내적과 외적.html">내적과 외적</a></li>
+		<li><a href="Formula/행렬과 행렬식.html">행렬과 행렬식</a></li>
+		<li><a href="Formula/역행렬.html">역행렬</a></li>
+	</ol>
+</details>
+</div>
+
+		<script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+		</script>
+</body>

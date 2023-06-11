@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		details summary::-webkit-details-marker {
+			color: #E2A8ED;
+			font-size: 20px;
+		}
+
+		ul {
+			margin-left: 30px;
+		}
+
+		summary {
+			margin-left: 40px;
+		}
+
+		ol{
+			margin-left: 40px;
+		}
+
+		h2{
+			margin-left: 30px;
+		}
+
+		div {
+			font-family:sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<div>
+		<h2>중학교 교육과정</h2>
+<details>
+		<summary>1학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li><a href="소인수분해.html">소인수분해</a></li>
+		<li><a href="정수와 유리수.html">정수와 유리수</a></li>
+		<li><a href="문자의 사용과 식의 계산.html">문자의 사용과 식의 계산</a></li>
+		<li><a href="일차방정식.html">일차방정식</a></li>
+		<li><a href="좌표와 그래프.html">좌표와 그래프</a></li>
+		<li><a href="정비례와 반비례.html">정비례와 반비례</a></li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li><a href="기본 도형.html">기본 도형</a></li>
+		<li><a href="작도와 합동.html">작도와 합동</a></li>
+		<li><a href="다각형(2).html">다각형</a></li>
+		<li><a href="원과 부채꼴.html">원과 부채꼴</a></li>
+		<li><a href="다면체와 회전체.html">다면체와 회전체</a></li>
+		<li><a href="입체도형의 겉넓이와 부피.html">입체도형의 겉넓이와 부피</a></li>
+		<li><a href="자료의 정리와 해석.html">자료의 정리와 해석</a></li>
+</ol>
+</details>
+<details>
+		<summary>2학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li><a href="유리수와 순환소수.html">유리수와 순환소수</a></li>
+		<li><a href="식의 계산.html">식의 계산</a></li>
+		<li><a href="부등식.html">부등식</a></li>
+		<li><a href="방정식.html">방정식</a></li>
+		<li><a href="일차함수.html">일차함수</a></li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li><a href="삼각형의 성질.html">삼각형의 성질</a></li>
+		<li><a href="사각형의 성질.html">사각형의 성질</a></li>
+		<li><a href="도형의 닮음.html">도형의 닮음</a></li>
+		<li><a href="피타고라스 정리.html">피타고라스 정리</a></li>
+		<li><a href="확률.html">확률</a></li>
+</ol>
+</details>
+<details>
+		<summary>3학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li><a href="실수와 그 연산.html">실수와 그 연산</a></li>
+		<li><a href="다항식의 곱셈과 인수분해.html">다항식의 곱셈과 인수분해</a></li>
+		<li><a href="이차방정식.html">이차방정식</a></li>
+		<li><a href="이차함수.html">이차함수</a></li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li><a href="Formula/삼각비.html">삼각비</a></li>
+		<li><a href="Formula/원의 성질.html">원의 성질</a></li>
+		<li><a href="Formula/통계.html">통계</a></li>
+</ol>
+</details>
+</div>
+
+		<script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+		</script>
+</body>

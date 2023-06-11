@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">분수와 소수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3><!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">분수의 덧셈과 뺄셈</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>진분수의 덧셈</h3>
+        분모가 다른 진분수의 덧셈을 할 때에는 두 분수를 통분한 다음 분자끼리 더합니다.<br>
+        <strong>분모의 곱을 이용하여 계산하기</strong><br>
+        <strong>분모의 최소공배수를 이용하여 계산하기</strong><br>
+        -> 계산 결과가 약분이 되면 약분하여 기약분수로 나타냅니다.<br>
+
+		<h3>대분수의 덧셈</h3>
+        분모가 다른 대분수의 덧셈을 할 때에는 두 분수를 통분한 다음 자연수는 자연수끼리 분수는 분수끼리 더하거나 대분수를 가분수로 고친 다음 계산합니다.<br>
+		<strong>자연수는 자연수끼리, 분수는 분수끼리 계산한다.</strong><br>
+		<strong>대분수를 가분수로 고쳐서 계산한다.</strong><br>
+
+		<h3>진분수 뺄셈하기</h3>
+        분모가 다른 진분수의 뺄셈을 할 때에는 두 분수를 통분한 다음 분자끼리 뺍니다.<br>
+		<strong>분모의 곱을 이용하여 계산한다.</strong><br>
+		<strong>분모의 최소공배수를 이용하여 계산한다.</strong><br>
+		
+        <h3>대분수의 뺄셈</h3>
+        분모가 다른 대분수의 뺄셈을 할 때에는 두 분수를 통분한 다음 자연수는 자연수끼리 분수는 분수끼리 빼거나 대분수를 가분수로 고친 다음 계산합니다.<br>
+        <strong>자연수는 자연수끼리, 분수는 분수끼리 계산한다.</strong><br>
+		<strong>대분수를 가분수로 고쳐서 계산한다.</strong><br>
+		<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="분수와 소수.html">분수와 소수</a></li>
+				<li><a href="분수.html">분수</a></li>
+				<li><a href="분수와 곱셈.html">분수와 곱셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html></h3>
+        <strong>⦁ 분수의 합이 진분수인 (진분수)＋(진분수)</strong><br>
+        - 분자끼리 더합니다.<br>
+        - 분모는 그대로 둡니다.<br>
+        [예시]<img src="elementry1-30.png" height="15%" width="15%"><br>
+		<strong>⦁ 분수의 합이 진분수인 (대분수)＋(대분수)</strong><br>
+		- 자연수끼리 더합니다.<br>
+		- 분수끼리 더합니다.<br>
+		[예시]<img src="elementry1-31.png" height="30%" width="30%"><br>
+
+		<h3>분모가 같은 분수끼리 덧셈하기(2)</h3>
+		<strong>⦁ 분수의 합이 가분수인 (진분수)＋(진분수)</strong><br>
+		- 가분수를 대분수로 고칩니다.<br>
+		[예시]<img src="elementry1-32.png" height="20%" width="20%"><br>
+		<strong>⦁ 분수의 합이 가분수인 (대분수)＋(대분수)</strong><br>
+		- 가분수를 대분수로 고칩니다.<br>
+		[예시]<img src="elementry1-33.png" height="25%" width="25%"><br>
+
+		<h3>분모가 같은 분수끼리 뺄셈하기</h3>
+		<strong>⦁ (진분수)－(진분수)</strong><br>
+		- 가분수를 대분수로 고칩니다.<br>
+		- 분모는 그대로 둡니다.<br>
+		<strong>⦁ 분수 부분끼리 뺄 수 있는 (대분수)－(대분수)</strong><br>
+		- 자연수끼리 뺍니다.<br>
+		- 분수끼리 뺍니다.<br>
+
+		<h3>자연수에서 분수 뺄셈하기</h3>
+		<strong>⦁ (자연수)－(진분수)</strong><br>
+		- 자연수에서 1만큼을 가분수로 고친 후 계산합니다.<br>
+		<strong>⦁ (자연수)－(대분수)</strong><br>
+		- 자연수에서 1만큼을 가분수로 고친 후 계산합니다.<br>
+		<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="분수와 소수.html">분수와 소수</a></li>
+				<li><a href="분수.html">분수</a></li>
+				<li><a href="분수와 곱셈.html">분수와 곱셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

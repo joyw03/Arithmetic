@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">사각형</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>수직과 수선</h3>
+            - 두 직선이 만나서 이루는 각이 직각일 때의 두 직선을 수직이라고 합니다.<br>
+            - 또 두 직선이 서로 수직으로 만나면 한 직선을 다른 직선에 대한 수선이라고 합니다.<br>
+
+			<h3>평행과 평행선</h3>
+		    - 한 직선에 수직인 두 직선을 그었을 때, 그 두 직선은 서로 만나지 않습니다.<br>
+            - 이와 같이 서로 만나지 않는 두 직선을 평행하다고 합니다.<br>
+            - 이때 평행한 두 직선을 평행선이라고 합니다.<br>
+            - 평행선의 한 직선에서 다른 직선에 수선을 긋습니다.<br>
+            - 이때 이 수선의 길이를 평행선 사이의 거리라고 합니다.<br>
+            - 평행선 사이에 그은 선분 중 수선의 길이가 가장 짧습니다.<br>
+            - 평행선 사이의 거리는 모두 같습니다.<br>
+
+            <h3>사다리꼴</h3>
+            <strong>사다리꼴의 뜻</strong> :  평행한 변이 한 쌍이라도 있는 사각형을 말합니다.<br>
+            <strong>사다리꼴의 성질</strong> : 평행한 변이 한 쌍이라도 있는 사각형을 말합니다.<br>
+
+            <h3>평행사변형</h3>
+            <strong>평행사변형의 뜻</strong> : 마주 보는 두 쌍의 변이 서로 평행한 사각형을 말합니다.<br>
+            <strong>평행사변형의 성질</strong><br>
+            : 마주 보는 두 변의 길이가 같습니다.<br>
+            마주 보는 두 각의 크기가 같습니다.<br>
+            이웃한 두 각의 크기의 합이 180도입니다.<br>
+
+            <h3>마름모</h3>
+            <strong>마름모의 뜻</strong> : 네 변의 길이가 모두 같은 사각형을 말합니다.<br>
+            <strong>마름모의 성질</strong><br>
+            : 네 변의 길이가 모두 같습니다.<br>
+            마주 보는 두 각의 크기가 같습니다.<br>
+            평행한 변이 두 쌍 있습니다<br>
+            이웃한 두 각의 크기의 합이 180도입니다.<br>
+            마주 보는 꼭짓점끼리 이은 선분이 서로 수직으로 만나고 이등분합니다.<br>
+
+            <h3>직사각형과 정사각형의 성질</h3>
+            <strong>직사각형의 성질</strong><br>
+            마주 보는 변의 길이가 같음.<br>
+            네 각이 모두 직각임.<br>
+            마주 보는 두 쌍의 변이 서로 평행함.<br>
+
+            <strong>정사각형의 성질</strong><br>
+            네 변의 길이가 모두 같음.<br>
+            네 각이 모두 직각임.<br>
+            마주 보는 두 쌍의 변이 서로 평행함.<br>
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 모양.html">여러가지 모양</li>
+                <li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

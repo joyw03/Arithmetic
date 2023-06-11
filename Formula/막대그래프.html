@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">막대그래프</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>막대그래프 알아보기</h3>
+			<ul>
+				<li>막대 그래프 : 조사한 수를 막대 모양으로 나타낸 그래프</li>
+				<li>가로는 동물, 세로는 학생 수를 나타냅니다.</li>
+				<li>막대의 길이를 비교하여 수량의 많고 적음을 비교합니다.</li>
+			</ul>
+			<img src="elementry1-22.png" width="50%", height="50%">
+
+
+			<h3>막대그래프 그리기</h3>
+			<table border="1">
+				<thead>
+					<tr><th>동물</th><th>토끼</th><th>강아지</th><th>호랑이</th><th>고양이</th></tr>
+				</thead>
+				<tfoot>
+					<tr><th>학생 수(명)</th><th>5</th><th>7</th><th>3</th><th>6</th></tr>
+				</tfoot>
+			</table>
+			<h2>좋아하는 동물별 학생 수</h2>
+			<img src="elementry1-22.png" width="40%", height="40%">
+			<ol>
+				<li>가로와 세로 중 어느 쪽에 조사한 수를 나타낼 것인가를 정합니다.</li>
+				<li>눈금 한칸의 크기를 정하고, 조사한 수 중에서 가장 큰 수를 나타낼 수 있도록 눈금의 수를 정합니다.</li>
+				<li>조사한 수에 맞도록 막대를 그립니다.</li>
+				<li>막대그래프에 제목을 붙입니다.</li>
+			</ol>
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="규칙 찾기.html">규칙 찾기</a></li>
+				<li><a href="자료의 정리.html">자료의 정리</a></li>
+				<li><a href="표와 그래프.html">표와 그래프</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

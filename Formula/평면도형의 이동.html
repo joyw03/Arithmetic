@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">평면도형의 이동</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>평면도형 밀기</h3>
+			<ul>
+				<li>도형을 밀었을때 도형의 모양은 변하지 않습니다.</li> 
+				<li>도형을 밀면 민 방향과 길이만큼 도형의 위치가 바뀝니다.</li>
+				<li>도형의 위치가 위쪽, 아래쪽, 왼쪽, 오른쪽으로 이동했지만 도형의 모양은 변하지 않습니다.</li>
+				<li>도형을 밀면 도형의 모양은 변하지 않지만 위치는 변합니다.</li>
+
+			<h3>평면도형 뒤집기</h3>
+			<img src="elementry4-1.png" width=80%; height=80%;><p>
+
+			<h3>평면 도형 돌리기</h3>
+			<img src="elementry4-2.png" width=80%; height=80%;><p>
+			<br><br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 모양.html">여러가지 모양</a></li>
+				<li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

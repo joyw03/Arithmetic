@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">자연수의 혼합계산</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>덧셈과 뺄셈이 섞여 있는 식의 계산</h3>
+        덧셈과 뺄셈이 섞여 있는 식에서는 앞에서부터 차례대로 계산합니다.<br>
+        덧셈과 뺄셈이 섞여 있고 괄호가 있는 식에서는 괄호 안을 먼저 계산합니다.<br>
+        
+        <h3>곱셈과 나눗셈이 섞여 있는 식의 계산</h3>
+		곱셈과 나눗셈이 섞여 있는 식에서는 앞에서부터 차례대로 계산합니다.<br>
+		곱셈과 나눗셈이 섞여 있고 괄호가 있는 식에서는 괄호 안을 먼저 계산합니다..<br>
+		
+        <h3>덧셈, 뺄셈, 곱셈이 섞여 있는 식의 계산</h3>
+        덧셈, 뺄셈, 곱셈이 섞여 있는 식에서는 곱셈을 먼저 계산합니다.<br>
+        덧셈, 뺄셈, 곱셈이 섞여 있고 괄호가 있는 식에서는 괄호 안을 가장 먼저 계산합니다.<br>
+
+		<h3>덧셈, 뺄셈, 나눗셈이 섞여 있는 식의 계산</h3>
+		덧셈, 뺄셈, 나눗셈이 섞여 있는 식에서는 나눗셈을 먼저 계산합니다.<br>
+        덧셈, 뺄셈, 나눗셈이 섞여 있고 괄호가 있는 식에서는 괄호 안을 가장 먼저 계산합니다.<br>
+        
+        <h3>덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식의 계산</h3>
+		덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식에서는 곱셈과 나눗셈을 먼저 계산합니다.<br>
+		덧셈, 뺄셈, 곱셈, 나눗셈, 괄호가 섞여 있는 식에서는 괄호 안을 가장 먼저 계산하고 곱셈과 나눗셈을 먼저 계산합니다.<br>
+	
+
+		<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="곱셈.html">곱셈</a></li>
+				<li><a href="나눗셈.html">나눗셈</a></li>
+				<li><a href="큰 수.html">큰 수</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

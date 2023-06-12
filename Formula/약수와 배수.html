@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">약수와 배수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>약수</h3>
+        어떤 수를 나누어떨어지게 하는 수를 그 수의 약수 라고 합니다.<br>
+        ① 나누어떨어지는 수를 찾아 약수 구하기<br>
+        4 ÷ 1 = 4<br>
+        4 ÷ 2 = 2<br>
+        4 ÷ 3 = 1 … 1<br>
+        4 ÷ 4 = 1 <br>
+        -> 4를 나누어떨어지게하는 1,2,4이 4의 약수입니다.<br><br>
+
+        ② 곱셈식을 이용하여 약수 구하기<br>
+        1 × 4 ＝ 4<br>
+        2 × 2 ＝ 4<br>
+        ->4의 약수: 1, 2, 4
+        
+        <h3>배수</h3>
+		어떤 수를 1배, 2배, 3배…한 수를 그 수의 배수라고 합니다.<br>
+		6×1＝6<br>
+        6×2＝12<br>
+        6×3＝18<br>
+        6×4＝24<br>
+        ->6을 1배, 2배, 3배…한 6, 12, 18…이 6의 배수입니다.<br>
+		
+        <h3>약수와 배수의 관계</h3>
+        곱셈식에서 곱하는 두 수는 계산 결과의 약수가 되고,<br>
+        계산 결과는 각각 두 수의 배수가 됩니다.<br>
+        -> 2와 4는 8의 약수입니다.<br>
+        -> 8은 2와 4의 배수입니다.<br>
+
+		<h3> 공약수와 최대공약수</h3>
+		두 수의 공통인 약수를 두 수의 공약수 라고 합니다.<br>
+        두 수의 공약수 중에서 가장 큰 수를 두 수의 최대공약수라고 합니다.<br>
+        12의 약수 : 1, 2, 3, 4, 6, 12<br>
+        18의 약수 : 1, 2, 3, 6, 9, 18<br>
+        ⇒ 12와 18의 공약수 : 1, 2, 3, 6<br>
+        ⇒ 12와 18의 최대공약수 : 6<br>
+        12와 18의 최대공약수 구하는 두가지 방법<br>
+        (1) 여러 수의 곱으로 나타내기<br>
+        (2) 두 수의 공약수로 나누어 보기<br>
+
+        <h3>공약수와 최대공약수의 관계</h3>
+        두 수의 공약수는 두 수의 최대공약수의 약수와 같습니다.<br>
+        18과 24의 공약수 알아보기<br>
+        - 18의 약수： 1, 2, 3, 6, 9, 18<br>
+        - 24의 약수： 1, 2, 3, 4, 6, 8, 12, 24<br>
+        ⇒ 18과 24의 공약수 : 1, 2, 3, 6<br>
+        18과 24의 최대공약수의 약수 알아보기<br>
+        - 18과 24의 최대공약수 : 6<br>
+        ⇒ 18과 24의 최대공약수의 약수 : 1, 2, 3, 6<br>
+        
+        <h3>공배수와 최소공배수</h3>
+        두 수의 공통인 배수를 두 수의 공배수라고 합니다.<br>
+        두 수의 공배수 중에서 가장 작은 수를 두 수의 최소공배수라고 합니다.<br>
+        2의 배수 : 2, 4, 6, 8, 10, 12…<br>
+        3의 배수 : 3, 6, 9, 12, 15…<br>
+        ⇒ 2와 3의 공배수 : 6, 12…<br>
+        ⇒ 2와 3의 최소공배수 : 6<br>
+        18과 30의 최소공배수 구하는 방법<br>
+        (1) 여러 수의 곱으로 나타내기<br>
+        (2) 두 수의 공약수로 나누어 보기<br>
+
+        <h3>공배수와 최소공배수의 관계</h3>
+        두 수의 공배수는 두 수의 최소공배수의 배수와 같습니다.<br>
+        5와 6의 공배수 알아보기<br>
+        - 5의 배수 : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60…<br>
+        - 6의 배수 : 6, 12, 18, 24, 30, 36, 42, 48, 54, 60…<br>
+        ⇒ 5와 6의 공배수 : 30, 60, 90, 120, 150…<br>
+        5와 6의 최소공배수의 배수 알아보기<br>
+        - 5와 6의 최소공배수 : 30<br>
+        ⇒ 5와 6의 최소공배수의 배수 : 30, 60, 90, 120, 150…<br> 
+    	<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="약분과 통분.html">약분과 통분</a></li>
+				<li><a href="소인수분해.html">소인수분해</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

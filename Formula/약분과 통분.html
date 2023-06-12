@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">약분과 통분</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>크기가 같은 분수 만들기</h3>
+        어떤 분수의 분모와 분자에 0이 아닌 같은 수를 곱하면 크기가 같은 분수가 됩니다.<br>
+        어떤 분수의 분모와 분자를 0이 아닌 같은 수로 나누면 크기가 같은 분수가 됩니다.<br>
+        
+        <h3>약분과 기약분수</h3>
+		분모와 분자를 그들의 공약수로 나누어 간단히 하는 것을 약분한다고 합니다.<br>
+		분모와 분자의 공약수가 1뿐인 분수를 기약분수라고 합니다.<br>
+        분모와 분자를 그들의 최대공약수로 나누면 기약분수가 됩니다<br>
+        
+        <h3>통분</h3>
+        두 수의 공통인 약수를 두 수의 공약수 라고 합니다.<br>
+        분수를 통분할 때 공통분모가 될 수 있는 수는 분모의 공배수 입니다.<br>
+        두 분수를 통분할 때에는 분모의 곱이나 최소공배수를 공통분모로 하면 편리합니다.<br>
+
+    	<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="약수와 배수.html">약수와 배수</a></li>
+				<li><a href="소인수분해.html">소인수분해</a></li>
+                <li><a href="분수의 덧셈과 뺄셈.html">분수의 덧셈과 뺄셈</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">다각형의 둘레와 넓이</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>다각형의 둘레</h3>
+            - 정다각형의 둘레<br>
+            (정다각형의 둘레)＝(한 변의 길이)×(변의 수)<br>
+            - 직사각형의 둘레<br>
+            (직사각형의 둘레)=((가로)+(세로))×2<br>
+            평행사변형의 둘레<br>
+            (평행사변형의 둘레) =((한 변의 길이)+(다른 한 변의 길이))×2<br>
+            마름모의 둘레<br>
+            (마름모의 둘레)=(한 변의 길이)×4<br>
+
+			<h3>다각형의 넓이</h3>
+            넓이의 단위<br>
+            1cm²(일 제곱센티미터) = 한 변이 1cm인 정사각형의 넓이 <br>
+            1cm²(일 제곱미터) = 한 변이 1m인 정사각형의 넓이 <br>
+            1km²(일 제곱킬로미터) = 한 변이 1km인 정사각형의 넓이<br>
+            직사각형의 넓이<br>
+            (직사각형의 넓이) = (가로)×(세로)<br>
+            (정사각형의 넓이) = (한 변의 길이)×(한 변의 길이)<br>
+            평행사변형의 넓이<br>
+            평행한 두 변을 밑변이라고 하고 두 변 사이의 거리를 높이라고 합니다.<br>
+            삼각형의 넓이<br>
+			(삼각형의 넓이) = (밑변의 길이)×(높이)÷2<br>
+            사다리꼴의 넓이<br>
+            (사다리꼴의 넓이) = ((윗변의 길이)+(아랫변의 길이))×(높이)÷ 2,<br>
+            마름모의 넓이<br>
+            (마름모의 넓이) = (한 대각선의 길이)×(다른 대각선의 길이)÷ 2<br>
+           
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 모양.html">여러가지 모양</li>
+                <li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

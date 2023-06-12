@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">원과 부채꼴</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>원</h3>
+            (1) 원 : 평면 위에서 한 점 O로부터 일정한 거리에 있는 모든 점들의 집합 (일정한 거리가 원의 반지름)<br>
+            (2) 호 : 원 O 위의 두 점 A, B를 양 끝점으로 하는 원의 일부를 호 AB라 한다.<br>
+            (3) 현 : 원 O의 두 점 C, D를 잇는 선분을 현 CD라 한다.<br>
+            (4) 부채꼴 : 원 O에서 두 반지름 OA, OB와 호 AB로 이루어진 도형<br>
+            (5) 부채꼴의 중심각 : 원 O에서 두 반지름 OA, OB가 이루는 ∠AOB를 호 AB에 대한 중심각이라 한다.<br>
+            (6) 활꼴 : 원 O의 현 CD와 호 CD로 이루어진 도형<br>
+            (7) 중심각과 호 사이의 관계
+            ① 한 원에서 같은 크기의 중심각에 대한 호의 길이는 같고, 같은 길이의 호에 대한 중심각의 크기는 같다.<br>
+            ② 한 원에서 부채꼴의 호의 길이와 넓이는 각각 중심각의 크기에 정비례한다.<br>
+            [참고] 현의 길이와 중심각의 크기는 정비례하지 않는다.<br>          
+            (8) 원주율(π) : 원의 지름의 길이에 대한 원의 둘레의 길이의 비<br>
+            (원주율) = (원의 둘레의 길이)/(원의 지름의 길이)<br>
+            [참고] 초등학교에서는 원주율을 근삿값 3.14로 계산하였으나 중학교에서는 π로 나타낸다. 이때, π는 '파이'라고 읽는다.<br>
+            (9)원의 둘레와 원의 넓이 : 반지름의 길이가 r인 원의 둘레의 길이를 l, 넓이를 S라 하면<br>
+            ① l=2πr<br>
+            ② S=πr²<br>
+
+			<h3>부채꼴</h3>
+			(1) 반지름의 길이가 r, 중심각의 크기가 x°인 부채꼴의 호의 길이를 l, 넓이를 S라 하면<br>
+            ① l=2πr×x°/360°<br>
+            ② S=πr²x°/360°<br>
+            (2) 반지름의 길이가 r, 호의 길이가 l인 부채꼴의 넓이를 S라 하면 S=½×l×r 이다.<br>
+            
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 모양.html">여러가지 모양</li>
+                <li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

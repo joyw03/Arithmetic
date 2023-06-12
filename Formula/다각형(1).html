@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">다각형</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>다각형과 정다각형</h3>
+            <strong>다각형</strong><br>
+            선분으로만 둘러싸인 도형<br><br>
+            
+            <strong>변의 수에 따라 달라지는 다각형의 이름 </strong><br>
+            <img src="elementry1-13.png" ><br>
+            - 변의 수가 3개일 때 : 삼각형<br>
+            - 변의 수가 4개일 때 : 사각형<br>
+            - 변의 수가 5개일 때 : 오각형<br>
+            - 변의 수가 6개일 때 : 육각형<br><br>
+            
+            <strong>정다각형</strong><br>
+            - 변의 길이가 모두 같고 각의 크기가 모두 같은 다각형<br><br>
+            <strong>변의 수에 따라 달라지는 정다각형의 이름</strong><br>
+            - 변의 수가 3개일 때 : 정삼각형<br>
+            - 변의 수가 4개일 때 : 정사각형<br>
+            - 변의 수가 5개일 때 : 정오각형<br>
+            - 변의 수가 6개일 때 : 정육각형<br>
+
+			<h3>대각선</h3>
+			<strong>- 대각선 : </strong><br>
+            다각형에서 서로 이웃하지 않는 두 꼭짓점을 이은 선분<br><br>
+			<strong>- 사각형의 종류에 따른 대각선의 특징 : </strong><br>
+            직사각형 : 두 대각선의 길이가 항상 같다, 한 대각선이 다른 대각선을 반으로 나눈다.<br>
+            정사각형 : 두 대각선의 길이가 항상 같다, 대각선이 항상 서로 수직으로 만난다,<br>
+             한 대각선이 다른 대각선을 반으로 나눈다, 두 대각선이 항상 서로 수직이고 길이가 같다.<br>
+            마름모 : 대각선이 항상 서로 수직으로 만난다, 한 대각선이 다른 대각선을 반으로 나눈다.<br>
+            평행사변형 : 한 대각선이 다른 대각선을 반으로 나눈다.<br>
+
+            <strong>(다각형의 대각선 수) = (한 점에서 그을 수 있는 대각선의 수) X (꼭짓점의 수) ／2</strong><br>
+            
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 모양.html">여러가지 모양</li>
+                <li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

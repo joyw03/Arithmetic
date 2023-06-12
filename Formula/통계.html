@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			overflow: hidden;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+		article#core img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">통계</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>대푯값</h3>
+			자료 분포의 중심 위치를 나타내 주는 값<br>
+			<br>평균 = 변량의 총합/변량의 개수 = (계급값 X 도수)의 총합/도수의 총합
+			중앙값 : 자료를 작은 값에서부터 차례로 크기 순으로 나열하였을 때,가운데 위치한 값<br>
+			최빈값 : 자료의 값 중에서 가장 빈번하게 일어난 값<br><br>
+			<h3>산포도</h3>
+			어떤 변량들이 흩어져 있는 정도를 하나의 수로 나타낸 값<br><br>
+			산포도에는 여러 가지가 있으나 평균을 중심으로 자료가 흩어져 있는 정도 나타내는 분산과 표준편차가 많이 생긴다.
+			<br><br>
+			분산 : 편차 제곱의 평균 <br>
+			분산 = ((편차의 제곱) X 도수)의 총합/도수의 합<br><br>
+			표준편차 : 분산의 양의 제곱근<br>
+			<br>
+			편차는 평균을 중심으로 변향으 얼마나 흩어져 있는지를 알 수 있는 값 그러므로, 편차의 합은 항상 0이다.
+			
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="평균과 가능성.html">평균과 가능성</a></li>
+				<li><a href="확률.html">확률</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

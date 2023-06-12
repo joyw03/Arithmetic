@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>Arithmetic</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        #search input[type="text"]{
+            width: 450px;
+            height: 30px;
+            border: 1px solid #E2A8ED;
+            background-color: #fff;
+            color: #333;
+            font-size: 14px;
+            vertical-align: middle;
+            margin-left: 50px;
+            margin-bottom: 13px;
+
+            background: 4% no-repeat;
+            padding-left: 25px;
+        }
+
+        #search button[type="submit"] {
+            position: absolute;
+            background-color: rgba( 255, 255, 255, 0);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 5px;
+            cursor: pointer;
+            vertical-align: middle;
+            margin-left: 480px;
+            margin-bottom: 13px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Daily <span style="color : #E2A8ED;">Q</span>uiz</h1></a>
+            <form id="search" method="get" onsubmit="return result()">
+            <button type="submit" class="searchButton">
+                <img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+            </button>
+            <input type="text" id="name" class="searchBox" placeholder="Search...">
+        </form>
+    </div>
+ <hr style="background:#E2A8ED; height:3px; border:0;">
+
+     <h2>퀴즈 결과</h2>
+
+    <div id="score"></div>
+    <div id="answers"></div>
+
+    <script>
+        //공식 검색 기능
+        function result() {
+                var name = document.getElementById('name').value;
+                var link = '../Formula/' + name + '.html';
+                window.open(link, target="_self");
+                return false;
+            }
+
+        // URL에서 점수와 선택지 가져오기
+        var urlParams = new URLSearchParams(window.location.search);
+        var score = urlParams.get('score');
+
+        // 정답과 오답 표시
+        var answersElement = document.getElementById('answers');
+        var answersHTML = "";
+
+        answersHTML += "<h3>질문 : 주어진 식∫(3x²－2x－2)dx를 부정적분 하시오.</h3>";
+        if (urlParams.get('q1') === 'x³－x²－2x＋c') {
+            answersHTML += "정답: x³－x²－2x＋c입니다.<br>";
+        } else {
+            answersHTML += "오답: 정답은 x³－x²－2x＋c입니다.<br><br>해설: ∫(3x²－2x－2)dx <br>  = 3∫(x²)dx - 2∫(x)dx - ∫(2)dx<br>  = 3(1/3x³) - 2(1/2x²) - 2x + C<br>  = x³－x²－2x＋C이므로 정답은 x³－x²－2x＋c입니다.";
+        }
+
+        answersElement.innerHTML = answersHTML;
+    </script>
+</body>
+</html>

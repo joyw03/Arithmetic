@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">정비례와 반비례</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>정비례</h3>
+        (1) 정비례 : 변화하는 두 양 x, y에서 x의 값이 2배, 3배, 4배, …로 됨에 따라 y의 값도 2배, 3배, 4배, …로 될 때, y는 x에 정비례한다고 한다.<br>
+        (2) 정비례 관계식<br>
+        ① 변화하는 두 양 x, y 사이에 0이 아닌 일정한 수 a에 대하여 y=ax인 관계가 있을 때, y=ax를 정비례 관계식이라 한다.<br>
+        ② y가 x에 정비례할 때, x에 대한 y의 비<br>
+
+        <h3> 반비례</h3>
+        (1) 반비례 : 변화하는 두 양 x, y에서 x의 값이 2배, 3배, 4배,…로 됨에 따라 y의 값은 ½배, ⅓배, ¼배,로 될 때, y는 x에 반비례한다고 한다.<br>
+        두 수직선을 점 0에서 서로 수직으로 만나게 할 때, 세로의 수직선을 y축<br>
+        (2) 반비례 관계식<br>
+        
+    	<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+                <li><a href="비와 비율.html">비와 비율</a></li>
+                <li><a href="비례식과 비례배분.html">비례식과 비례배분</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

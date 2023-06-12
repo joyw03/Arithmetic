@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">비와 비율</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>비 알아보기</h3>
+        두 수의 비를 나타내기 : 두 수를 나눗셈으로 비교할 때 기호 :을 사용합니다. <br>
+        두 수 3과 1을 비교할 때, 3:1이라 쓰고 3 대 1이라고 읽습니다. 3:1은 3이 1을 기준으로 몇배인지를 나타내는 비입니다.<br>
+        (예) 3:4<br>
+        - 3 대 4<br>
+        - 4에 대한 3의 비<br>
+        - 3의 4에 대한 비<br>
+        - 3과 4의 비<br>
+        두 수의 크기를 비교하기 위해 비로 나타내기 : ':'의 왼쪽에 있는 수가 비교하는 양이고 오른쪽에 있는 수가 기준량입니다.<br>
+    
+		<h3>비율 알아보기</h3>
+        *비율<br>
+        - 비율 구하기 : (비율)=(비교하는 양)÷(기준량)=(비교하는 양)/(기준량)<br>
+		- 비 4:5에서 기호 ':'의 왼쪽에 있는 4는 비교하는 양이고, 오른쪽에 있는 5는 기준량입니다.<br>
+        - 비교하는 양을 기준량으로 나눈 값을 비의 값 또는 비율이라고 합니다.<br>
+        - 비 4:5를 비율로 나타내면 4/5 또는 0.8입니다.<br>
+
+		<h3>백분율 알아보기</h3>
+        비율에 100을 곱한 값을 백분율이라고 합니다.<br>
+        백분율은 기호 % 를 사용하여 나타냅니다.<br>
+        비율 56/100 또는 0.56을 백분율로 56 %라 쓰고 56 퍼센트라고 읽습니다.<br>
+        
+        <h3>비교하는 양과 기준량 구하기</h3>
+        - 비교하는 양 구하기 : (비교하는 양)＝(기준량)×(비율)<br>
+        - 기준량 구하기 : (기준량)＝(비교하는 양)÷(비율)<br>
+
+        <h3>비율이 사용되는 경우</h3>
+        속력 알아보기<br>
+        - 속력 구하기 : (속력)＝(간 거리)÷(걸린 시간)<br>
+        - 단위시간에 간 평균 거리를 속력이라고 합니다.<br>
+        - 1시간, 1분, 1초 동안에 가는 평균 거리를 각각 시속, 분속, 초속이라고 하고 이것을 각각 km/시, m/분, m/초로 나타냅니다.<br>
+
+        * 인구 밀도 알아보기<br>
+        - 인구 밀도 구하기 : (인구 밀도)＝(인구)÷(넓이(km2))<br>
+        - 1km²에 사는 평균 인구를 인구 밀도라고 합니다.<br>
+
+        * 용액의 진하기 알아보기<br>
+        - 용액의 진하기 구하기 : (용액의 진하기)＝(용질의 양)÷(용액의 양)<br>
+        - 용액의 양에 대한 용질의 양의 비율을 용액의 진하기라고 합니다.<br>
+		<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="삼각비.html">삼각비</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">소수의 나눗셈</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>(소수 한 자리 수)÷(소수 한 자리 수)</h3>
+		① 분수의 나눗셈으로 바꾸어 계산하기<br>
+		② 소수점을 옮겨 세로로 계산하기<br>
+
+		<h3>(소수 두 자리 수)÷(소수 두 자리 수)</h3>
+		① 분수의 나눗셈으로 바꾸어 계산하기 <br>
+		② 소수점을 옮겨 세로로 계산하기<br>
+
+		<h3>(소수 두 자리 수)÷(소수 한 자리 수)</h3>
+        ① 분수의 나눗셈으로 바꾸어 계산하기<br>
+        ② 소수점을 옮겨 세로로 계산하기<br>
+
+		<h3>(소수 세 자리 수)÷(소수 두 자리 수)</h3>
+		① 분수의 나눗셈으로 바꾸어 계산하기<br>
+        ② 소수점을 옮겨 세로로 계산하기<br>
+
+        <h3>(자연수)÷(소수)</h3>
+        ① 분수의 나눗셈으로 바꾸어 계산하기<br>
+        ② 소수점을 옮겨 세로로 계산하기<br>
+
+        <h3>소수의 나눗셈에서 나머지 구하기</h3>
+        ① 뺄셈으로 계산하기<br>
+        ② 세로로 계산하기<br>
+
+        <h3>몫을 반올림하여 나타내기</h3>
+        ① 몫을 반올림하여 소수 첫째 자리까지 나타내려면 소수 둘째 자리에서 반올림해야 합니다.<br>
+        ② 몫을 반올림하여 소수 둘째 자리까지 나타내려면 소수 셋째 자리에서 반올림해야 합니다<br>
+        
+        <h3>(소수)÷(자연수)</h3>
+        자연수의 나눗셈과 같은 방법으로 계산하고 나뉠 수의 자리에 맞추어 소수점을 찍어 몫을 구합니다.<br>
+        소수를 분수로 고쳐서 분수의 나눗셈을 계산하여 몫을 구합니다.<br>
+        ① 분수로 고쳐서 계산하기<br>
+        ② 자연수의 나눗셈을 이용하여 계산하기<br>
+        ③ 세로로 계산하기<br>
+
+        <h3>몫이 1보다 작은 (소수)÷(자연수)</h3>
+        소수를 분수로 고쳐서 분수의 나눗셈을 계산하여 몫을 구합니다.<br>
+        나뉠 수가 나누는 수보다 작은 경우 몫이 1보다 작으므로 먼저 몫의 일의 자리에 0을 쓰고 소수점을 찍은 다음 자연수의 나눗셈과 같은 방법으로 계산합니다.<br>
+        ① 분수로 고쳐서 계산하기<br>
+        ② 자연수의 나눗셈을 이용하여 계산하기<br>
+        ③ 세로로 계산하기<br>
+
+        <h3>소수점 아래 0을 내려 나눗셈하기</h3>
+        ① 분수로 고쳐서 계산하기<br>
+        ② 자연수의 나눗셈을 이용하여 계산하기<br>
+        ③ 세로로 계산하기<br>
+
+        <h3>몫의 소수 첫째 자리에 0이 있는 (소수)÷(자연수)</h3>
+        몫이 자연수로 나누어떨어지지 않는 경우에는 몫의 자리에 0을 쓴 다음 나뉠 수의 오른쪽 끝자리에 0이 계속 있는 것으로 생각하고 0을 내려 계산합니다.<br>
+        ① 분수로 고쳐서 계산하기<br>
+        ② 자연수의 나눗셈을 이용하여 계산하기<br>
+        ③ 세로로 계산하기<br>
+
+        <h3>(자연수)÷(자연수)의 몫을 소수로 나타내기</h3>
+        ① 분수로 고쳐서 계산하기 : (자연수)÷(자연수)의 경우 몫을 소수로 나타내려면 분모가 10, 100……인 분수로 나타내어 몫을 구합니다.<br>
+        ② 자연수의 나눗셈을 이용하여 계산하기<br>
+        ③ 세로로 계산하기<br>
+
+        <h3>몫을 어림하여 나타내기</h3>
+        몫이 소수로 간단하게 구해지지 않는 (자연수)÷(자연수)의 경우 몫을 적절한 자리에서 반올림하여 나타냅니다.<br>
+        ① 몫을 소수 둘째 자리에서 반올림하여 나타내기<br>
+        ② 몫을 소수 둘째 자리 미만을 올림하여 나타내기<br>
+        ③ 몫을 소수 둘째 자리 미만을 버림하여 나타내기<br>
+		<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="소수.html">소수</a></li>
+				<li><a href="소수와 곱셈.html">소수와 곱셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

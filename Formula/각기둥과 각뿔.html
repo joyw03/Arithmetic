@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">각기둥과 각뿔</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>각기둥</h3>
+            각기둥 : 입체도형 중 위아래에 있는 면이 서로 평행하고 합동인 다각형으로 이루어진 도형입니다.<br>
+            각 기둥은 밑면의 모양에 따라 삼각기둥 , 사각기둥 , 오각기둥 …이라고 합니다<br>
+
+            <h3>각기둥의 구성 요소</h3>
+            밑면 : 서로 평행하고 나머지 다른 면에 수직인 두 면<br>
+            옆면 : 밑면에 수직인 면<br>
+            각 기둥의 옆면의 모양은 직사각형입니다.<br>
+            모서리 : 면과 면이 만나는 선분<br>
+            꼭짓점 : 모서리와 모서리가 만나는 점<br>
+            높이 : 두 밑면 사이의 거리<br>
+
+            <h3>각뿔, 각뿔의 밑면과 옆면</h3>
+            각뿔 : 입체도형 중에서 밑에 놓인 면이 다각형이고 옆으로 둘러싼 면이 모두 삼각형인 도형입니다.<br>
+            밑면 : 밑에 있는 면<br>
+            옆면 : 옆으로 둘러싼 면<br>
+            각 뿔의 옆면의 모양은 삼각형 입니다.<br>
+
+            <h3>각뿔의 이름과 구성 요소</h3>
+            각뿔은 밑면의 모양에 따라 삼각뿔, 사각뿔, 오각뿔……이라고 합니다.<br>
+            모서리 : 면과 면이 만나는 선분<br>
+            꼭짓점 : 모서리와 모서리가 만나는 점<br>
+            각뿔의 꼭짓점 : 꼭짓점 중에서도 옆면이 모두 만나는 점<br>
+            높이 : 각뿔의 꼭짓점에서 밑면에 수직인 선분<br>
+
+            <h3>각기둥의 전개도</h3>
+            각기둥의 전개도 : 각기둥의 모서리를 잘라서 펼쳐 놓은 그림<br>
+            각기둥의 전개도의 특징<br>
+            ① 두 밑면은 서로 합동인 다각형입니다.<br>
+            ② 옆면은 모두 직사각형입니다.<br>
+            ③ 접을 때 만나는 선분의 길이는 같습니다.<br>
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="여러가지 도형.html">여러가지 도형</a></li>
+				<li><a href="평면도형.html">평면도형</a></li>
+				<li><a href="원.html">원</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

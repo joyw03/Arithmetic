@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			overflow: hidden;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+		article#core img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">도형의 닮음</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>합동과 닮음</h3>
+			합동은 모양과 크기가 같은 두 도형의 관계를 나타낸다. 또한 모양은 서로 같지만 크기가 다른 관계를 닮음이라 한다. 합동과 마찬가지로 닮음인 두 도형은 대응점, 대응변, 대응각을 가진다. 이 때, 대응변의 길이의 비를 닮음비라고 부른다.<br><br><br>
+			<h3>삼각형의 닮음 조건</h3> <br>
+			1. 대응 관계에 있는 세 쌍의 변의 길이의 비가 서로 같다. (SSS 닮음)<br>
+			2. 대응 관계에 있는 두 쌍의 변의 길이의 비가 서로 같고, 끼인각의 크기가 같다. (SAS 닮음)<br>
+			3. 대응 관계에 있는 두 쌍의 각의 크기가 같다.<br><br><br>
+			AAA닮음이 아닌 까닭은 두 각의 크기가 주어지면 삼각형의 내각의 합은 180도로 정해지므로 다른 각의 크기가 정해진다. 따라서 두 각의 크기만 주어지더라도 닮음 조건을 만족한다.
+			
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="삼각형의 성질.html">삼각형의 성질</a></li>
+				<li><a href="사각형의 성질.html">사각형의 성질</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

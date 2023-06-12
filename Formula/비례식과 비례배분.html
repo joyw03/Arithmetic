@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">비례식과 비례배분</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3><!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">비례식과 비례배분</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>전항과 후항 알아보기</h3>
+			2(전항):5(후항)<br>
+			비 2:5에서 2와 5를 비의 항 이라 하고 기호: 앞에 있는 2를 전항, 뒤에 있는 5를 후항 이라 합니다.<br>
+
+			<h3>비례식 알아보기</h3>
+			비율이 같은 두 비를 등호를 사용하여 3:4=6:8과 같이 나타낼 수 있습니다. 이와 같은 식을 비례식 이라고 합니다.<br>
+
+			<h3>외항과 내항 알아보기</h3>
+			비례식 2:5=4:10에서 바깥쪽에 있는 두 항 2와 10을 외항, 안쪽에 있는 두 항 5와 4를 내항이라 합니다.<br>
+
+			<h3>비의 성질 알아보기</h3>
+			비례식 2:5=4:10에서 바깥쪽에 있는 두 항 2와 10을 외항, 안쪽에 있는 두 항 5와 4를 내항이라 합니다.<br>
+			비의 전항과 후항을 0이 아닌 같은 수로 나누어도 비율은 같습니다.<br>
+
+			<h3>간단한 자연수의 비로 나타내기</h3>
+			(1) (소수):(소수)<br>
+			소수점 아래 자릿수에 따라 전항과 후항에 각각 10, 100, 1000…을 곱합니다.<br>
+			(2) (분수):(분수)<br>
+			전항과 후항에 각각 두 분모의 공배수를 곱합니다<br>
+			(3) (자연수):(자연수)<br>
+			전항과 후항을 각각 두 자연수의 공약수로 나눕니다.<br>
+			(4) (소수):(분수) 또는 (분수):(소수)<br>
+			분수를 소수로 나타내거나 소수를 분수로 나타낸 후 간단한 자연수의 비로 나타냅니다.<br>
+
+			<h3>비례식의 성질 알아보기</h3>
+			비례식에서 외항의 곱과 내항의 곱은 같습니다.<br>
+
+			<h3>비례배분 알아보기</h3>
+			전체를 주어진 비로 배분하는 것을 비례배분 이라고 합니다.<br>
+			비례배분을 할 때에는 주어진 비의 전항과 후항의 합을 분모로 하는 분수의 비로 고쳐서 계산하면 편리합니다.<br>
+
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="비와 비율.html">비와 비율</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body></h3>
+			띠그래프 : 전체에 대한 각 부분의 비율을 띠 모양으로 나타낸 그래프<br>
+
+            <h3>띠그래프 그리기</h3>
+            띠그래프 그리는 방법<br>
+            ① 주어진 자료의 전체 크기에 대해 각 항목이 차지하는 백분율을 구합니다.<br>
+            ② 각 항목의 백분율의 합계가 100 %가 되는지 확인합니다.<br>
+            ③ 각 항목들이 차지하는 백분율만큼 띠를 나눕니다.<br>
+            ④ 나눈 띠 위에 각 항목의 명칭을 쓰고, 백분율의 크기를 씁니다.<br>
+            ⑤ 띠그래프의 제목을 씁니다.<br>
+
+            <h3>원그래프 알아보기</h3>
+            원그래프 : 전체에 대한 각 부분의 비율을 원 모양으로 나타낸 그래프<br>
+
+            <h3>원그래프 그리기</h3>
+            원그래프 그리는 방법<br>
+            ① 주어진 자료의 전체 크기에 대해 각 항목이 차지하는 백분율을 구합니다.<br>
+            ② 각 항목의 백분율의 합계가 100 %가 되는지 확인합니다.<br>
+            ③ 각 항목들이 차지하는 백분율만큼 원을 나눕니다.<br>
+            ④ 나눈 원 위에 각 항목의 명칭을 쓰고, 백분율의 크기를 씁니다.<br>
+            ⑤ 원그래프의 제목을 씁니다.<br>
+			
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="표와 그래프.html">표와 그래프</a></li>
+				<li><a href="꺽은선그래프.html">꺽은선그래프</a></li>
+				<li><a href="자료의 정리html">자료의 정리</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

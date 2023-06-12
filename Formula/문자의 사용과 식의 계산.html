@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">문자의 사용과 식의 계산</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>문자를 사용하여 식 세우기</h3>
+        문자를 사용하면 수량 사이의 관계를 간단한 식으로 나타낼 수 있다.<br>
+
+        <h3>곱셈 기호의 생략 방법</h3>
+        (1) 수와 문자, 문자와 문자의 곱에서는 곱셈 기호(×)를 생략한다. (5×a=5a, a×b=ab)<br>
+        (2) 수와 문자의 곱에서는 수를 문자 앞에 쓴다. (a×5=5a)<br>
+        [참고] 수가 1인 경우는 생략한다. (1×a=a, -1×b=-b)<br>
+        (3) 문자와 문자의 곱에서는 보통 알파벳 순서로 쓴다. (a ×x ×b=abx)<br>
+        (4) 같은 문자의 곱은 지수를 사용하여 거듭제곱의 꼴로 나타낸다.<br>
+         (a×a×a×b×b=a³×b²=a³b²)<br>
+		
+        <h3>나눗셈 기호의 생략 방법</h3>
+        나눗셈 기호를 생략할 때는 분수의 꼴로 나타낸다.<br>
+        단, 분모는 영이 아니다.<br>
+    	<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="식의 계산.html">식의 계산</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

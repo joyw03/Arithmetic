@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">정수와 유리수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+        <h3>양수와 음수</h3>
+        (1) 양수 : 0보다 큰 수로 양의 부호(+)를 붙여 나타낸다.<br>
+        (2) 음수 : 0보다 작은 수로 음의 부호(-)를 붙여 나타낸다.<br>
+        [참고] 양의 부호(+)는 '플러스' 또는 '양수', 음의 부호(-)는 '마이너스' 또는 '음수'로 읽는다.<br>
+              
+        <h3>정수</h3>
+        (1) 양의 정수 : 자연수에 양의 부호(+)가 붙은 수<br>
+        (2) 음의 정수 : 자연수에 음의 부호(-)가 붙은 수<br>
+        (3) 정수 : 양의 정수, 0, 음의 정수를 통틀어 정수라 한다.<br>
+        [참고] · 0은 양수도 음수도 아니다.<br>
+        - 양의 정수는 (+)부호를 생략하여 나타낼 수 있으므로 양의 정수는 자연수와 같다.<br>
+		
+        <h3>유리수</h3>
+        (1) 양의 정수는 (+)부호를 생략하여 나타낼 수 있으므로 양의 정수는 자연수와 같다.<br>
+        (2) 양의 정수는 (+)부호를 생략하여 나타낼 수 있으므로 양의 정수는 자연수와 같다.<br>
+        (3) 음의 유리수(음수) : 분수에 음의 부호(-)를 붙인 수<br>
+    	<br><br><br>
+		</article>
+
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="분수.html">분수</a></li>
+				<li><a href="자연수의 혼합계산.html">자연수의 혼합계산</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>

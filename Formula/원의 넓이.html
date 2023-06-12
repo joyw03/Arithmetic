@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			overflow: hidden;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+		article#core img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">원의 넓이</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>원주의 원주율 알아보기</h3>
+			원의 둘레를 원둘레 또는 원주라고 합니다. 또 원주의 길이를 간단히 원주라고도 합니다.<br>
+			원의 크기와 관계없이 지름에 대한 원주의 비는 항상 일정합니다. 이 비의 값을 원주율 이라고 합니다.<br>
+			(원주율)＝(원주)÷(지름)<br>
+			원주율을 소수로 나타내면 3.1415926535……와 같이 끝없이 써야 합니다.<br>원주율을 반올림하여 다음과 같이 나타낼 수 있습니다.<br>
+			
+            <h3>원주율을 이용하여 지름과 원주 구하기</h3>
+			(지름)＝(원주)÷(원주율)<br>
+
+            <h3>원주의 활용</h3>
+            (반원의 둘레의 길이)＝(곡선 부분)＋(직선 부분)<br>
+            ＝(원주의 반)＋(지름)<br>
+            ＝(원주)÷2＋(지름)<br>
+
+            <h3>원의 넓이 구하기</h3>
+            원을 한없이 잘게 잘라 이어 붙여 만든 직사각형을 이용하여 원의 넓이를 알아봅니다.<br>
+            (원의 넓이)＝1/2×(반지름)<br>
+            ＝(지름)×(원주율)×1/2×(반지름)<br>
+            ＝(반지름)×(반지름)×(원주율)<br><br>
+
+            ⇒ 따라서, (원의 넓이)＝(반지름)×(반지름)×(원주율)<br>
+
+            <h3>끈의 길이 구하기</h3>
+            원통을 묶는 끈을 직선 부분과 곡선 부분으로 나누어 각각의 길이를 구합니다.<br> 이때, 곡선 부분을 모으면 원이 되므로 원주를 이용합니다.<br>
+            (끈의 길이)＝(직선 부분)＋(곡선 부분)<br>
+
+            <h3>지름의 합이 같은 원들의 원주의 합 알아보기</h3>
+            지름의 합이 같은 원들의 원주의 합은 같습니다.<br>
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="원.html">원</a></li>
+				<li><a href="원의 성질.html">원의 성질</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

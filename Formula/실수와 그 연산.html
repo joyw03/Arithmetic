@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			overflow: hidden;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+		article#core img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">실수와 그 연산</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<br><br>
+			유리수는 두 정수 p, q(단, q는 0이 아닌 정수)에 대해 p/q로 나타낼 수 있는 모든 수 입니다. 유리수는 유한소수이거나, 순환하는 무한소수로 순환마디를 이용해 나타낼 수 있었습니다. 그 중 순환하지 않는 무한소수는 유리수가 아님을 배웠습니다.
+			<br><br>
+			무리수는 중학교 2학년 과정에서 배웠던 순환하지 않는 무한소수를 의미합니다. 정수를 분자와 분모로 가지는 분수로 나타낼 수 없는 수가 곧 무리수입니다.
+			<br><br>
+			실수는 유리수와 무리수를 묶은 표현으로, 유리수와 무리수는 겹치지 않으면서 하나의 수직선을 만들어냅니다.<br><br>
+			<h3>제곱근표</h3> <br><br>
+			무리수는 순환하지 않는 무한소수이지만, 반올림하여 어림수로 그 값을 알 수 있습니다. <br>
+			제곱근 표는 1부터 99.9까지의 수의 양의 제곱근을 소수 세 자릿수로 나타낸 표로, 왼쪽의 수가 정수, 위쪽의 수가 소숫점으로 찾고 싶은 수의 만나는 값을 찾으면 됩니다.
+			
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="분수.html">분수</a></li>
+				<li><a href="정수와 유리수.html">정수와 유리수</a></li>
+				<li><a href="수의 범위와 어림하기.html">수의 범위와 어림하기</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

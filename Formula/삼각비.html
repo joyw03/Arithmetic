@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			overflow: hidden;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+		article#core img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">삼각비</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<br>
+			직각삼각형의 닮음 조건으로는 SSS, SAS, AA닮음이 있습니다. 이 중 SSS닮음인 두 직각삼각형을 들어보겠습니다. 세 변의 길이가 3,4,5인 직각삼각형과 세 변의 길이가 6,8,10인 직각삼각형은 서로 닮음입니다. <br><br>닮음인 두 삼각형을 겹쳐보면, 큰 직각삼각형의 밑변, 높이, 빗변의 길이가 모두 작은 작각삼각형의 밑변, 높이, 빗변의 길이의 2배임을 알 수 있습니다. 삼각비는 직각삼각형의 두 변을 기준량과 비교하는 양으로 놓은 비율입니다. 큰 직각삼각형의 변의 길이는 모두 2배이므로, 삼각비의 값은 변하지 않습니다. 따라서 닮음인 직각삼각형에서 삼각비는 항상 같습니다.
+			<br><br>
+			<h3>삼각비의 종류</h3> <br><br>
+			1. sin은 사인이라고 읽고 뒤에 각을 적어 나타냅니다.
+			 sinA는 각A를 직각이 아닌 밑각으로 가질 때 빗변에 대한 높이의 비 입니다.
+			 <br><br>
+
+			2. cos은 코사인이라고 읽고 뒤에 각을 적어 나타냅니다.
+			cosA는 각A를 직각이 아닌 밑각으로 가질 때 빗변에 대한 밑변의 비 입니다.<br><br>
+
+			3. tan는 탄젠트라고 읽고 뒤에 각을 적어 나타냅니다.
+			tanA는 각A를 직각이 아닌 밑각으로 가질 때 밑변에 대한 높이의 비입니다.
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li><a href="삼각형의 성질.html">삼각형의 성질</a></li>
+				<li><a href="도형의 닮음.html">도형의 닮음</a></li>
+				<li><a href="피타고라스 정리.html">피타고라스 정리</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = name + '.html';; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="../index.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">방정식</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>등식</h3>
+            (1) 등식 : 등호(=)를 사용하여 수나 식이 서로 같음을 나타낸 식<br>
+            (2) 좌변, 우변, 양변 : 등식에서 등호의 왼쪽 부분을 좌변, 오른쪽 부분을 우변이라고 하며, 좌변과 우변을 통틀어 양변이라고 한다.<br>
+            [참고] 주어진 식이 참, 거짓에 관계없이 등호를 사용하여 나타낸 식은 모두 등식이다.<br>
+            
+            <h3>방정식과 항등식</h3>
+            (1) 방정식 : 문자를 포함한 등식에서 문자의 값에 따라 참이 되기도 하고, 거짓이 되기도 하는 등식<br>
+            ① 미지수 : 방정식에 들어있는 문자<br>
+            ② 방정식의 해(근) : 방정식을 참이 되게 하는 미지수의 값<br>
+            ③ 방정식을 푼다 : 방정식의 해를 구한다.<br>
+        
+            (2) 항등식 : 등식에 들어있는 미지수에 어떤 값을 대입하여도 항상 참이 되는 등식<br>
+            [참고] 항등식은 미지수의 값에 관계없이 항상 참이므로 해는 모든 수가 된다.<br>
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+                <li><a href="식의 계산.html">식의 계산</a></li>
+                <li><a href="부등식.html">부등식</a></li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<script>
+		function result() {
+			var name = document.getElementById('name').value;
+			var link = name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+			window.open(link, target="_self");
+			return false;
+		}
+</script>
+</body>
+</html>
